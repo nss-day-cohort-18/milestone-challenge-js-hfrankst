@@ -19,7 +19,9 @@ function tree() {
 	// for each (value in charObject) {
 		
 	// }
-	console.log(charObject.)
+	console.log(charObject.height);
+	console.log(charObject.character);
+	if ()
 
 
 	return
