@@ -7,22 +7,42 @@ Use event listeners to track the 'Grow your Tree' button and the keypress of the
 If either field is left blank, display alert prompting the user to provide input
 */
 
+var charObject = {};
 var character = document.getElementById("inputChar");
 var height = document.getElementById("inputHeight");
-var empty = " ";
 
-var charObject = {};
 
 	
 
 function tree() {
-	// for each (value in charObject) {
-		
-	// }
+	var space;
+	var leaf;
+	var treeBranch;
+	//establishes a variables to hold the number of characters to include on the tree 'branches'
+	var leafCount = 1;
+	var spaceCount = charObject.height;
+
+	if (!charObject.height || !charObject.character) {
+		alert("Please fill in both fields!");
+	} else {
+		//adding the spaces before the character
+		for (var i = 0; i < charObject.height; i++) {
+			//storing the spaces in a variable to use in a bit
+			space = " ".repeat(spaceCount);
+			//storing the character in a variable to be used in a bit
+			leaf = charObject.character.repeat(leafCount);
+			//add the two together to make a line of the tree
+			treeBranch = space + leaf;
+			//builds the tree in the console
+			console.log(treeBranch); 
+			//next two lines change the number of spaces and characters for the next iteration
+			leafCount = leafCount + 2;
+			spaceCount = spaceCount - 1;
+		}
+	}
+
 	console.log(charObject.height);
 	console.log(charObject.character);
-	if ()
-
 
 	return
 };
@@ -39,6 +59,18 @@ function captureHeight() {
 	return
 };
 
+//Event Listeners 
 inputChar.addEventListener('change', captureCharacter);
 inputHeight.addEventListener('change', captureHeight);
 
+//the following two fire off the tree function when the 'enter' is pressed 
+character.addEventListener('keyup', function(hold){
+	if (hold.which === 13) {
+		tree();
+	}
+});
+height.addEventListener('keyup', function(hold){
+	if (hold.which === 13) {
+		tree();
+	}
+});
