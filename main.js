@@ -41,8 +41,8 @@ function tree() {
 		}
 	}
 
-	console.log(charObject.height);
-	console.log(charObject.character);
+	// console.log(charObject.height);
+	// console.log(charObject.character);
 
 	return
 };
@@ -59,7 +59,7 @@ function captureHeight() {
 	return
 };
 
-//Event Listeners 
+//Event Listeners.....
 inputChar.addEventListener('change', captureCharacter);
 inputHeight.addEventListener('change', captureHeight);
 
