@@ -1,3 +1,4 @@
+
 # NSS-challenges
 The Static Web: JavaScript Milestone Challenge
 
@@ -40,10 +41,3 @@ Example
 
 Here's what the pine tree should look like when you specify a height of 7, and use the asterisk character.
 
-      *
-     ***
-    *****
-   *******
-  *********
- ***********
-*************
