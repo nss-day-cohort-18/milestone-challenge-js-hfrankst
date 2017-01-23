@@ -8,8 +8,8 @@ If either field is left blank, display alert prompting the user to provide input
 */
 
 var charObject = {};
-var character = document.getElementById("inputChar");
-var height = document.getElementById("inputHeight");
+var	character = document.getElementById("inputChar");
+var	height = document.getElementById("inputHeight");
 
 
 	
